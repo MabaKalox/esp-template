@@ -5,8 +5,6 @@
   "build": {
     "dockerfile": "Dockerfile",
     "args": {
-      "CONTAINER_USER": "esp",
-      "CONTAINER_GROUP": "esp",
       "ESP_BOARD": "{{ mcu }}"
     }
   },
@@ -39,6 +37,6 @@
     9333,
     8000
   ],
-  "workspaceMount": "source=${localWorkspaceFolder},target=/home/esp/{{ crate_name }},type=bind,consistency=cached",
-  "workspaceFolder": "/home/esp/{{ crate_name }}"
+  "workspaceMount": "source=${localWorkspaceFolder},target=/workspace/{{ crate_name }},type=bind,consistency=cached",
+  "workspaceFolder": "/workspace/{{ crate_name }}"
 }
